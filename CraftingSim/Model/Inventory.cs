@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace CraftingSim.Model
 {
@@ -89,7 +91,16 @@ namespace CraftingSim.Model
         /// <param name="file">Path to the materials file</param>
         public void LoadMaterialsFromFile(string file)
         {
-            //TODO Implement Me
+            string s;
+
+            StreamReader sr = new StreamReader(file);
+
+            while ((s = sr.ReadLine()) != null)
+            {
+                //
+            }
+
+            sr.Close();
         }
     }
 }

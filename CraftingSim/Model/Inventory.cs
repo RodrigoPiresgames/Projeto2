@@ -38,7 +38,7 @@ namespace CraftingSim.Model
         /// <param name="quantity">The new amount to set</param>
         public void AddMaterial(IMaterial material, int quantity)
         {
-            //TODO Implement Me
+            materials.Add(material, quantity);
         }
 
         /// <summary>
@@ -50,8 +50,13 @@ namespace CraftingSim.Model
         /// <returns>True if removed successfuly, false if not enough material</returns>
         public bool RemoveMaterial(IMaterial material, int quantity)
         {
-            // TODO Implement Me
-            return false;
+            if (materials.Remove(material, out quantity))
+            {
+                materials.Remove(material, out quantity);
+                return true;
+            }
+            else
+                return false;
         }
 
         /// <summary>

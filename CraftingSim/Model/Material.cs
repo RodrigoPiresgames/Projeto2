@@ -14,6 +14,12 @@ namespace CraftingSim.Model
         //name of the material
         public string Name { get; }
 
+        public Material(int id, string name)
+        {
+            this.Id = id;
+            this.Name = name;
+        }
+
         public bool Equals(IMaterial obj)
         {
             //

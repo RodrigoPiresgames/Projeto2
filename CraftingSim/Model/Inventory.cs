@@ -93,13 +93,18 @@ namespace CraftingSim.Model
         {
             string s;
 
+            Material materialToAdd;
+
             StreamReader sr = new StreamReader(file);
 
             while ((s = sr.ReadLine()) != null)
             {
-                //
+                string[] items = s.Split(",");
+                
+                materialToAdd = new Material(Int32.Parse(items[0]), items[1]);
+                materials.Add(materialToAdd, Int32.Parse(items[2]));
+                
             }
-
             sr.Close();
         }
     }

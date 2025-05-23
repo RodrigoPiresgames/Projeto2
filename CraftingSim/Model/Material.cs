@@ -19,7 +19,6 @@ namespace CraftingSim.Model
             this.Id = id;
             this.Name = name;
         }
-
         public bool Equals(IMaterial obj)
         {
             //
@@ -33,7 +32,7 @@ namespace CraftingSim.Model
             {
                 return false;
             }
-
+            
             return this.Id == ((IMaterial)obj).Id;
         }
         public override int GetHashCode()
